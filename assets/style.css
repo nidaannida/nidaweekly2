@@ -1,0 +1,76 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* abu sangat muda */
+    color: #555; /* abu sedang */
+}
+
+/* Judul */
+h1 {
+    background-color: #9e9e9e; /* abu medium */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Subjudul */
+h3 {
+    text-align: center;
+    color: #666;
+}
+
+/* Navbar */
+table {
+    background-color: #bdbdbd; /* abu terang */
+    border-collapse: collapse;
+}
+
+/* Menu */
+td {
+    padding: 10px 20px;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #333; /* abu gelap (bukan hitam) */
+    font-weight: bold;
+}
+
+/* Hover */
+a:hover {
+    color: #ffffff;
+}
+
+/* Gambar */
+img {
+    border-radius: 10px;
+    border: 3px solid #aaa;
+}
+
+/* Paragraf */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* List */
+ul {
+    width: fit-content;
+    margin: 20px auto;
+    background-color: #e0e0e0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+li {
+    margin: 5px 0;
+}
