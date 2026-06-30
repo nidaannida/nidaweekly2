@@ -1,4 +1,4 @@
-kalau aku buat file latihan.html
+kalau aku buat file latihan.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,22 +14,22 @@ kalau aku buat file latihan.html
     <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr>
             <td>
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </td>
             <td>
-                <a href="profile.html">Profile</a>
+                <a href="profile.php">Profile</a>
             </td>
             <td>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
             </td>
             <td>
-                <a href="mahasiswa.html">Data Mahasiswa</a>
+                <a href="mahasiswa.php">Data Mahasiswa</a>
             </td>
             <td>
-                <a href="latihan.html">Latihan</a>
+                <a href="latihan.php">Latihan</a>
             </td>
             <td>
-                <a href="form.html">Form</a>
+                <a href="form.php">Form</a>
             </td>
         </tr>
     </table>

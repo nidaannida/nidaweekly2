@@ -12,22 +12,22 @@
         <table border="1"align="center"cellspacing="0"cellpadding="10px">
             <tr>
                 <td>
-                    <a href="index.html">home</a>
+                    <a href="index.php">home</a>
                 </td>
                 <td>
-                    <a href="profile.html">profile</a>
+                    <a href="profile.php">profile</a>
                 </td>
                 <td>
-                    <a href="contact.html">contact</a>
+                    <a href="contact.php">contact</a>
                 </td>
                 <td>
-                    <a href="mahasiswa.html">Data Mahasiswa</a>
+                    <a href="mahasiswa.php">Data Mahasiswa</a>
                 </td>
                 <td>
-                    <a href="latihan.html">Latihan</a>
+                    <a href="latihan.php">Latihan</a>
                 </td>
                 <td>
-                <a href="form.html">Form</a>
+                <a href="form.php">Form</a>
             </td>
             </tr>
         </table> 

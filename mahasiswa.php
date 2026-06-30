@@ -13,39 +13,46 @@
     <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr>
             <td>
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </td>
             <td>
-                <a href="profile.html">Profile</a>
+                <a href="profile.php">Profile</a>
             </td>
             <td>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
             </td>
             <td>
-                <a href="mahasiswa.html">Data Mahasiswa</a>
+                <a href="mahasiswa.php">Data Mahasiswa</a>
             </td>
             <td>
-                <a href="latihan.html">Latihan</a>
+                <a href="latihan.php">Latihan</a>
             </td>
             <td>
-                <a href="form.html">Form</a>
+                <a href="form.php">Form</a>
             </td>
         </tr>
     </table>
     <br><br>
-    <h2>
-        Data Mahasiswa
-    </h2>
+    <h2>Data Mahasiswa</h2>
+    <a href= "tambahdata.php"><button>Tambah Data</button></a>
     <table border="1" cellpaddings="5px">
         <tr>
-            <td rowspan="2">Baris 1 dan 2, Kolom 1</td>
-            <td colspan="2">Baris 1, Kolom 2 & 3</td>
-            <!-- <td>Baris 1, Kolom 2</td> -->
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Program Studi</th>
+            <th>Email<th>
+            <th>Nomor Wathsap</th>
+            <th>Foto</th>    
         </tr>
         <tr>
-            <td>Baris 2, Kolom 1</td>
-            <td>Baris 2, Kolom 2</td>
-            
+            <td>1</td>
+            <td>Annida</td>
+            <td>12345678910</td>
+            <td>Pendidkan Luar Biasa</td>
+            <td>uzumakihyuga@gmail.com</td>
+            <td>081224325091</td>
+            <td><img src="/images/Taehyung.jpg" alt="Foto Annida" width="100"></td>
         </tr>
     </table>
     
