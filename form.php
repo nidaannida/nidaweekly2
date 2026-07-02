@@ -1,139 +1,76 @@
+<?php
+require 'fungsi.php';
+
+if (isset($_POST['kirim'])) {
+
+    $nama   = $_POST['nama'];
+    $nim    = $_POST['nim'];
+    $prodi  = $_POST['Jurusan'];
+    $email  = $_POST['email'];
+    $nohp   = $_POST['nohp'];
+
+    // Upload Foto
+    $foto = $_FILES['foto']['name'];
+    $tmp  = $_FILES['foto']['tmp_name'];
+
+    if (!is_dir("img")) {
+        mkdir("img");
+    }
+
+    move_uploaded_file($tmp, "img/" . $foto);
+
+    $query = "INSERT INTO mahasiswa (nama,nim,prodi,email,no_hp,foto)
+              VALUES ('$nama','$nim','$prodi','$email','$nohp','$foto')";
+
+    mysqli_query($koneksi, $query);
+
+    if (mysqli_affected_rows($koneksi) > 0) {
+        echo "
+        <script>
+            alert('Data berhasil ditambahkan');
+            window.location='mahasiswa.php';
+        </script>";
+    } else {
+        echo "
+        <script>
+            alert('Data gagal ditambahkan');
+        </script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Form Mahasiswa</title>
 </head>
 <body>
-    <h1 align="center">
-        WEB TI ROP - 2026
-    </h1>
-    <table border="1" align="center" cellspacing="0" cellpadding="10px">
-        <tr>
-            <td>
-                <a href="index.php">Home</a>
-            </td>
-            <td>
-                <a href="profile.php">Profile</a>
-            </td>
-            <td>
-                <a href="contact.php">Contact</a>
-            </td>
-            <td>
-                <a href="mahasiswa.php">Data Mahasiswa</a>
-            </td>
-            <td>
-                <a href="latihan.php">Latihan</a>
-            </td>
-            <td>
-                <a href="form.php">Form</a>
-            </td>
-        </tr>
-    </table>
-    <br><br>
-    <h2>
-        Latihan 3 (Kamis, 23 April 2026)
-    </h2>
-<form>
-    <label>
-        First name:
-    </label>
-    <br>
-    <input type="text" id="fname" name="fname" style="width: 250px">
-    <br>
-    <label>
-        NIM:
-    </label>
-    <br>
-    <input type="number" style="width: 250px;">
-    <br>
-    <label>
-        Password
-    </label>
-    <br>
-    <input type="password" style="width: 250px;">
-    <br>
-    <label>
-        E-mail
-    </label>
-    <br>
-    <input type="email" style="width: 250px;">
-    <br>
-    <label>
-        Nomor HP
-    </label>
-    <br>
-    <input type="tel" style="width: 250px;">
-    <br>
-    <label>
-        Website Pribadi
-    </label>
-    <br>
-    <input type="url" style="width: 250px;">
-    <br>
-    <label>
-        Tanggal lahir
-    </label>
-    <br>
-    <input type="date" style="width: 253px;">
-    <br>
-    <label>
-        Warna Favorit
-    </label>
-    <br>
-    <input type="color" style="width: 258px;">
-    <br>
-    <label>
-        Tingkat Kepuasan
-    </label>
-    <br>
-    <input type="range" style="width: 256px;">
-    <br>
-    <p>
-        Pilih Jenis Kelamin
-    </p>
-    <input type="radio" id="wanita" name="jenis kelamin" value="Wanita">
-    <label for="wanita">Wanita</label>
-    <br>
-    <input type="radio" id="pria" name="jenis kelamin" value="Pria">
-    <label for="wanita">Pria</label>
-    <p>
-        Pilih Hobi
-    </p>
-    <input type="checkbox" id="hobi1" name="hobi1" value="Musik">
-    <label for="hobi1">Mendengarkan Musik</label>
-    <br>
-    <input type="checkbox" id="hobi2" name="hobi2" value="Film">
-    <label for="hobi2">Menonton Film</label>
-    <br>
-    <input type="checkbox" id="hobi3" name="hobi3" value="Buku">
-    <label for="hobi3">Membaca Buku</label>
-    <br>
-    <input type="checkbox" id="hobi4" name="hobi4" value="Gambar">
-    <label for="hobi4">Menggambar</label>
-    <br>
-    <input type="checkbox" id="hobi5" name="hobi5" value="Olahaga">
-    <label for="hobi5">Bersepeda</label>
-    <br><br>
-    <label>
-        Upload Foto
-    </label>
-    <br>
-    <input type="file" style="width: 250px;">
-    <br><br>
-    <label for="alamat">Alamat:</label><br>
-    <textarea id="alamat" name="alamat" rows="4" style="width: 250px;"></textarea><br><br>
 
-    <label for="jurusan">Jurusan:</label><br>
-    <select id="jurusan" name="jurusan" style="width: 257px;">
-        <option value="">-- Pilih Jurusan --</option>
-        <option value="inf">Informatika</option>
-        <option value="ti">Teknologi Informasi</option>
-    </select><br><br>
+<h2>Form Input Mahasiswa</h2>
 
-    <input type="submit" value="Kirim Data" style="width: 257px;">
+<form action="" method="post" enctype="multipart/form-data">
+
+    Nama <br>
+    <input type="text" name="nama" required><br><br>
+
+    NIM <br>
+    <input type="text" name="nim" required><br><br>
+
+    Jurusan <br>
+    <input type="text" name="Jurusan" required><br><br>
+
+    Email <br>
+    <input type="email" name="email" required><br><br>
+
+    No HP <br>
+    <input type="text" name="nohp" required><br><br>
+
+    Foto <br>
+    <input type="file" name="foto" required><br><br>
+
+    <button type="submit" name="kirim">Kirim Data</button>
+
 </form>
+
 </body>
 </html>
