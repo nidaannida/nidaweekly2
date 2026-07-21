@@ -1,6 +1,6 @@
 <?php
 
-$koneksi = mysqli_connect("localhost", "root", "", "nidweekly_bti");
+$koneksi = mysqli_connect("localhost", "root", "", "nidweekly-bti");
 
 // Cek koneksi
 if (!$koneksi) {
@@ -19,5 +19,14 @@ function tampildata($query)
     }
 
     return $rows;
+}
+
+function hapusdata($id)
+{
+    global $koneksi;
+
+    mysqli_query($koneksi, "DELETE FROM mahasiswa WHERE id = $id");
+
+    return mysqli_affected_rows($koneksi);
 }
 ?>

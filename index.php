@@ -37,7 +37,7 @@
         </h3>
         <br><br>
         <center>
-            <img src="Taehyung.jpeg"width="250px"alt="logo"/>
+            <img src="images/Taehyung.jpeg" width="250" alt="logo">
         </center>
         <br><br>
 

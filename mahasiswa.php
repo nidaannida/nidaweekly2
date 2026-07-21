@@ -51,14 +51,13 @@ $mahasiswas = tampildata($query); ///wadah isi data mahasiswa yang masih dibawa 
                 <a href="latihan.php">Latihan</a>
             </td>
             <td>
-                <a href="tambahdata.php">Form</a>
+                <a href="form.php">Form</a>
             </td>
         </tr>
     </table>
     <br><br>
     
-    <a href="tambahdata.php"><button>Tambah Data</button></a>
-    
+    <a href="form.php"><button type="button">Tambah Data</button></a>
     <h2>
         Data Mahasiswa
     </h2>
